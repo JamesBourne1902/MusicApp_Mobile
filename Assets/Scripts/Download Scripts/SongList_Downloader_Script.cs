@@ -11,7 +11,7 @@ using System.Collections.Generic;
 public class GitHubFileList : MonoBehaviour
 {
     public List<string> fileList = new List<string>();
-    private string token = "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";
+    private string token = "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";
 
     private void Start()
     {
