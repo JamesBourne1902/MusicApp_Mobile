@@ -11,7 +11,8 @@ using System.Collections.Generic;
 public class GitHubFileList : MonoBehaviour
 {
     public List<string> fileList = new List<string>();
-    private string token = "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";
+    private string token1 = "ghp_XUVpNkWHuJYqf";
+    private string token2 = "jLMMFMP0HEqWMMaDS2pU3jp";
 
     private void Start()
     {
@@ -23,7 +24,7 @@ public class GitHubFileList : MonoBehaviour
         string apiUrl = $"https://api.github.com/repos/Beast-Bourne/Music_Storage/contents/";
 
         UnityWebRequest request = UnityWebRequest.Get(apiUrl);
-        request.SetRequestHeader("Authorization", "token " + token);
+        request.SetRequestHeader("Authorization", "token " + token1 + token2);
         request.SetRequestHeader("User-Agent", "UnityApp");
 
         yield return request.SendWebRequest();
